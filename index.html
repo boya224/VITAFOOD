@@ -41,19 +41,21 @@
 
     <title>VITAFOOD &mdash; Never cook again!</title>
   </head>
-
   <body>
     <header class="header">
       <a href="#">
-        <img class="logo" alt="VITAFOOD logo" src="img/vitafood-logo.png" />
+        <img class="logo" alt="Omnifood logo" src="img/omnifood-logo.png" />
       </a>
+
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">如何運作</a></li>
-          <li><a class="main-nav-link" href="#">餐點</a></li>
-          <li><a class="main-nav-link" href="#">用戶評價</a></li>
-          <li><a class="main-nav-link" href="#">價格方案</a></li>
-          <li><a class="main-nav-link nav-cta" href="#">免費試用</a></li>
+          <li><a class="main-nav-link" href="#how">如何運作</a></li>
+          <li><a class="main-nav-link" href="#meals">餐點</a></li>
+          <li>
+            <a class="main-nav-link" href="#testimonials">用戶評價</a>
+          </li>
+          <li><a class="main-nav-link" href="#pricing">價格方案</a></li>
+          <li><a class="main-nav-link nav-cta" href="#cta">免費試用</a></li>
         </ul>
       </nav>
 
@@ -73,8 +75,11 @@
             <p class="hero-description">
               讓健康再次成為日常，我們為您提供全年無休的智能美食訂閱服務。每一道菜都根據您的個人口味和營養需求精心調配。
             </p>
-            <a href="#" class="btn btn--full margin-right-sm">開啟健康日常</a>
-            <a href="#" class="btn btn--outline">更多詳情 &darr;</a>
+            <a href="#cta" class="btn btn--full margin-right-sm"
+              >開啟健康日常</a
+            >
+
+            <a href="#how" class="btn btn--outline">更多詳情 &darr;</a>
             <div class="delivered-meals">
               <div class="delivered-imgs">
                 <img src="img/customers/customer-1.jpg" alt="Customer photo" />
@@ -90,11 +95,16 @@
             </div>
           </div>
           <div class="hero-img-box">
-            <img
-              src="img/hero.png"
-              class="hero-img"
-              alt="Woman enjoying food, meals in storage container, and food bowls on a table"
-            />
+            <picture>
+              <source srcset="img/hero.webp" type="image/webp" />
+              <source srcset="img/hero-min.png" type="image/png" />
+
+              <img
+                src="img/hero-min.png"
+                class="hero-img"
+                alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+              />
+            </picture>
           </div>
         </div>
       </section>
@@ -118,7 +128,7 @@
         </div>
       </section>
 
-      <section class="section-how">
+      <section class="section-how" id="how">
         <div class="container">
           <span class="subheading">如何運作</span>
           <h2 class="heading-secondary">三個簡單步驟，為您每日注入健康</h2>
@@ -137,6 +147,7 @@
               它確保您獲得所需的所有營養和維生素，無論您遵循何種飲食！
             </p>
           </div>
+
           <div class="step-img-box">
             <img
               src="img/app/app-screen-1.png"
@@ -183,7 +194,7 @@
         </div>
       </section>
 
-      <section class="section-meals">
+      <section class="section-meals" id="meals">
         <div class="container center-text">
           <span class="subheading">餐點</span>
           <h2 class="heading-secondary">VITAFOOD AI從5000+食譜中選擇</h2>
@@ -203,28 +214,29 @@
               <p class="meal-title">日式煎餃</p>
               <ul class="meal-attributes">
                 <li class="meal-attribute">
-                  <ion-icon class="meal-icon" name="flame-outline"></ion-icon
-                  ><sapn><strong>650</strong> 卡路里</sapn>
+                  <ion-icon class="meal-icon" name="flame-outline"></ion-icon>
+                  <span><strong>650</strong> 卡路里</span>
                 </li>
                 <li class="meal-attribute">
                   <ion-icon
                     class="meal-icon"
                     name="restaurant-outline"
-                  ></ion-icon
-                  ><sapn> 營養評分 &reg; <strong>74</strong> </sapn>
+                  ></ion-icon>
+                  <span>營養評分 &reg; <strong>74</strong></span>
                 </li>
                 <li class="meal-attribute">
-                  <ion-icon class="meal-icon" name="star-outline"></ion-icon
-                  ><sapn><strong>4.9</strong> 評級(537)</sapn>
+                  <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.9</strong> 評級 (537)</span>
                 </li>
               </ul>
             </div>
           </div>
+
           <div class="meal">
             <img
               src="img/meals/meal-2.jpg"
               class="meal-img"
-              alt="Japanese Gyozas"
+              alt="Avocado Salad"
             />
             <div class="meal-content">
               <div class="meal-tags">
@@ -234,71 +246,73 @@
               <p class="meal-title">酪梨沙拉</p>
               <ul class="meal-attributes">
                 <li class="meal-attribute">
-                  <ion-icon class="meal-icon" name="flame-outline"></ion-icon
-                  ><sapn><strong>400</strong> 卡路里</sapn>
+                  <ion-icon class="meal-icon" name="flame-outline"></ion-icon>
+                  <span><strong>400</strong> 卡路里</span>
                 </li>
                 <li class="meal-attribute">
                   <ion-icon
                     class="meal-icon"
                     name="restaurant-outline"
-                  ></ion-icon
-                  ><sapn> 營養評分 &reg; <strong>92</strong> </sapn>
+                  ></ion-icon>
+                  <span>營養評分 &reg; <strong>92</strong></span>
                 </li>
                 <li class="meal-attribute">
-                  <ion-icon class="meal-icon" name="star-outline"></ion-icon
-                  ><sapn><strong>4.8</strong> 評級(441)</sapn>
+                  <ion-icon class="meal-icon" name="star-outline"></ion-icon>
+                  <span><strong>4.8</strong> 評級 (441)</span>
                 </li>
               </ul>
             </div>
           </div>
+
           <div class="diets">
-            <h3 class="heading-tertiary">適用於任何飲食方式:</h3>
+            <h3 class="heading-tertiary">Works with any diet:</h3>
             <ul class="list">
               <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
-                ><span>Vegetarian</span>
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Vegetarian</span>
               </li>
               <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
-                ><span>Vegan</span>
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Vegan</span>
               </li>
               <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
-                ><span>Pescatarian</span>
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Pescatarian</span>
               </li>
               <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
-                ><span>Gluten-free</span>
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Gluten-free</span>
               </li>
               <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
-                ><span>Lactose-free</span>
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Lactose-free</span>
               </li>
               <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
-                ><span>Keto</span>
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Keto</span>
               </li>
               <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
-                ><span>Paleo</span>
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Paleo</span>
               </li>
               <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
-                ><span>Low FODMAP</span>
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Low FODMAP</span>
               </li>
               <li class="list-item">
-                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
-                ><span>Kid-friendly</span>
+                <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
+                <span>Kid-friendly</span>
               </li>
             </ul>
           </div>
         </div>
+
         <div class="container all-recipes">
           <a href="#" class="link">查看所有食譜 &rarr;</a>
         </div>
       </section>
 
-      <section class="section-testimonials">
+      <section class="section-testimonials" id="testimonials">
         <div class="testimonials-container">
           <span class="subheading">用戶評價</span>
           <h2 class="heading-secondary">一旦嘗試，就回不去了!</h2>
@@ -353,90 +367,104 @@
             </figure>
           </div>
         </div>
+
         <div class="gallery">
           <figure class="gallery-item">
             <img
               src="img/gallery/gallery-1.jpg"
-              alt="Photo beautifully arranged food"
+              alt="Photo of beautifully
+            arranged food"
             />
+            <!-- <figcaption>Caption</figcaption> -->
           </figure>
           <figure class="gallery-item">
             <img
               src="img/gallery/gallery-2.jpg"
-              alt="Photo beautifully arranged food"
+              alt="Photo of beautifully
+            arranged food"
             />
           </figure>
           <figure class="gallery-item">
             <img
               src="img/gallery/gallery-3.jpg"
-              alt="Photo beautifully arranged food"
+              alt="Photo of beautifully
+            arranged food"
             />
           </figure>
           <figure class="gallery-item">
             <img
               src="img/gallery/gallery-4.jpg"
-              alt="Photo beautifully arranged food"
+              alt="Photo of beautifully
+            arranged food"
             />
           </figure>
           <figure class="gallery-item">
             <img
               src="img/gallery/gallery-5.jpg"
-              alt="Photo beautifully arranged food"
+              alt="Photo of beautifully
+            arranged food"
             />
           </figure>
           <figure class="gallery-item">
             <img
               src="img/gallery/gallery-6.jpg"
-              alt="Photo beautifully arranged food"
+              alt="Photo of beautifully
+            arranged food"
             />
           </figure>
           <figure class="gallery-item">
             <img
               src="img/gallery/gallery-7.jpg"
-              alt="Photo beautifully arranged food"
+              alt="Photo of beautifully
+            arranged food"
             />
           </figure>
           <figure class="gallery-item">
             <img
               src="img/gallery/gallery-8.jpg"
-              alt="Photo beautifully arranged food"
+              alt="Photo of beautifully
+            arranged food"
             />
           </figure>
           <figure class="gallery-item">
             <img
               src="img/gallery/gallery-9.jpg"
-              alt="Photo beautifully arranged food"
+              alt="Photo of beautifully
+            arranged food"
             />
           </figure>
           <figure class="gallery-item">
             <img
               src="img/gallery/gallery-10.jpg"
-              alt="Photo beautifully arranged food"
+              alt="Photo of beautifully
+            arranged food"
             />
           </figure>
           <figure class="gallery-item">
             <img
               src="img/gallery/gallery-11.jpg"
-              alt="Photo beautifully arranged food"
+              alt="Photo of beautifully
+            arranged food"
             />
           </figure>
           <figure class="gallery-item">
             <img
               src="img/gallery/gallery-12.jpg"
-              alt="Photo beautifully arranged food"
+              alt="Photo of beautifully
+            arranged food"
             />
           </figure>
         </div>
       </section>
 
-      <section class="section-pricing">
+      <section class="section-pricing" id="pricing">
         <div class="container">
           <span class="subheading">價格方案</span>
           <h2 class="heading-secondary">健康飲食不花大錢</h2>
         </div>
 
         <div class="container grid grid--2-cols margin-bottom-md">
-          <div class="princing-plan princing-plan--starter">
+          <div class="pricing-plan pricing-plan--starter">
             <header class="plan-header">
               <p class="plan-name">前菜方案</p>
               <p class="plan-price"><span>$</span>399</p>
@@ -464,7 +492,7 @@
             </div>
           </div>
 
-          <div class="princing-plan princing-plan--complete">
+          <div class="pricing-plan pricing-plan--complete">
             <header class="plan-header">
               <p class="plan-name">完整方案</p>
               <p class="plan-price"><span>$</span>649</p>
@@ -489,7 +517,7 @@
               </li>
             </ul>
             <div class="plan-sing-up">
-              <a href="#" class="btn btn--full">Start eating well</a>
+              <a href="#" class="btn btn--full">開啟健康日常</a>
             </div>
           </div>
         </div>
@@ -532,7 +560,7 @@
         </div>
       </section>
 
-      <section class="section-cta">
+      <section class="section-cta" id="cta">
         <div class="container">
           <div class="cta">
             <div class="cta-text-box">
@@ -541,13 +569,14 @@
                 健康、美味且無憂的餐點正在等著您。立即開始健康飲食。您隨時可以取消或暫停。而且，第一餐由我們贈送！
               </p>
 
-              <form class="cta-form" action="#">
+              <form class="cta-form" name="sign-up" netlify>
                 <div>
                   <label for="full-name">輸入全名</label>
                   <input
                     id="full-name"
                     type="text"
-                    placeholder="王小明"
+                    placeholder="John Smith"
+                    name="full-name"
                     required
                   />
                 </div>
@@ -558,13 +587,14 @@
                     id="email"
                     type="email"
                     placeholder="me@example.com"
+                    name="email"
                     required
                   />
                 </div>
 
                 <div>
                   <label for="select-where">從何得知VITAFOOD?</label>
-                  <select id="select-where" required>
+                  <select id="select-where" name="select-where" required>
                     <option value="">請選擇一個選項:</option>
                     <option value="friends">朋友或家人</option>
                     <option value="youtube">YouTube 影片</option>
@@ -594,7 +624,7 @@
       <div class="container grid grid--footer">
         <div class="logo-col">
           <a href="#" class="footer-logo">
-            <img class="logo" alt="VITAFOOD logo" src="img/vitafood-logo.png" />
+            <img class="logo" alt="Omnifood logo" src="img/omnifood-logo.png" />
           </a>
 
           <ul class="social-links">
@@ -616,9 +646,11 @@
           </ul>
 
           <p class="copyright">
-            Copyright &copy; 2027 by VITAFOOD, Inc. All rights reserved.
+            Copyright &copy; <span class="year">2027</span> by Omnifood, Inc.
+            All rights reserved.
           </p>
         </div>
+
         <div class="address-col">
           <p class="footer-heading">聯絡我們</p>
           <address class="contacts">
@@ -632,6 +664,7 @@
             </p>
           </address>
         </div>
+
         <nav class="nav-col">
           <p class="footer-heading">帳號</p>
           <ul class="footer-nav">
