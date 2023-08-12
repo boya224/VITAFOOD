@@ -3,8 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="description"
+      content="VITAFOOD is an AI-powered food subscription that will make you eat healthy again, 365 days per year. It's tailored to your personal tastes and nutritional needs."
+    />
+
+    <!-- Always include this line of code!!! -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/apple-touch-icon.png" />
+    <link rel="manifest" href="manifest.webmanifest" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&display=swap"
@@ -13,6 +22,7 @@
 
     <link rel="stylesheet" href="css/general.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/queries.css" />
 
     <script
       type="module"
@@ -23,8 +33,15 @@
       src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.js"
     ></script>
 
-    <title>VITAFOOD</title>
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
+    <script defer src="js/script.js"></script>
+
+    <title>VITAFOOD &mdash; Never cook again!</title>
   </head>
+
   <body>
     <header class="header">
       <a href="#">
@@ -32,15 +49,18 @@
       </a>
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">How it works</a></li>
-          <li><a class="main-nav-link" href="#">Meals</a></li>
-          <li><a class="main-nav-link" href="#">Testimonials</a></li>
-          <li><a class="main-nav-link" href="#">Pricing</a></li>
-          <li><a class="main-nav-link" href="#">Pricing</a></li>
-          <li><a class="main-nav-link" href="#">Pricing</a></li>
-          <li><a class="main-nav-link nav-cta" href="#">Try for free</a></li>
+          <li><a class="main-nav-link" href="#">如何運作</a></li>
+          <li><a class="main-nav-link" href="#">餐點</a></li>
+          <li><a class="main-nav-link" href="#">用戶評價</a></li>
+          <li><a class="main-nav-link" href="#">價格方案</a></li>
+          <li><a class="main-nav-link nav-cta" href="#">免費試用</a></li>
         </ul>
       </nav>
+
+      <button class="btn-mobile-nav">
+        <ion-icon class="icon-mobile-nav" name="menu-outline"></ion-icon>
+        <ion-icon class="icon-mobile-nav" name="close-outline"></ion-icon>
+      </button>
     </header>
 
     <main>
@@ -48,17 +68,13 @@
         <div class="hero">
           <div class="hero-text-box">
             <h1 class="heading-primary">
-              A healthy meal delivered to your door, every single day
+              餐桌上的每日健康<br />我們送到您的門口
             </h1>
             <p class="hero-description">
-              The smart 365-days-per-year food subscription that will make you
-              eat healthy again. Tailored to your personal tastes and
-              nutritional needs.
+              讓健康再次成為日常，我們為您提供全年無休的智能美食訂閱服務。每一道菜都根據您的個人口味和營養需求精心調配。
             </p>
-            <a href="#" class="btn btn--full margin-right-sm"
-              >Start eating well</a
-            >
-            <a href="#" class="btn btn--outline">Learn more &darr;</a>
+            <a href="#" class="btn btn--full margin-right-sm">開啟健康日常</a>
+            <a href="#" class="btn btn--outline">更多詳情 &darr;</a>
             <div class="delivered-meals">
               <div class="delivered-imgs">
                 <img src="img/customers/customer-1.jpg" alt="Customer photo" />
@@ -69,7 +85,7 @@
                 <img src="img/customers/customer-6.jpg" alt="Customer photo" />
               </div>
               <p class="delivered-text">
-                <span>250,000+</span> meals delivered last year!
+                <span>250,000+</span> 用戶去年已經加入健康行列!
               </p>
             </div>
           </div>
@@ -85,7 +101,7 @@
 
       <section class="section-featured">
         <div class="container">
-          <h2 class="heading-featured-in">As featured in</h2>
+          <h2 class="heading-featured-in">合作對象</h2>
           <div class="logos">
             <img src="img/logos/techcrunch.png" alt="Techcrunch logo" />
             <img
@@ -104,10 +120,8 @@
 
       <section class="section-how">
         <div class="container">
-          <span class="subheading">How it works</span>
-          <h2 class="heading-secondary">
-            Your daily dose of health in 3 simple steps
-          </h2>
+          <span class="subheading">如何運作</span>
+          <h2 class="heading-secondary">三個簡單步驟，為您每日注入健康</h2>
         </div>
 
         <div class="container grid grid--2-cols grid--center-v">
@@ -115,13 +129,12 @@
           <div class="step-text-box">
             <p class="step-number">01</p>
             <h3 class="heading-tertiary">
-              Tell us what you like (and what not)
+              告訴我們您喜歡什麼（以及不喜歡什麼）
             </h3>
             <p class="step-description">
-              Never again waste time thinking about what to eat! Omnifood AI
-              will create a 100% personalized weekly meal plan just for you. It
-              makes sure you get all the nutrients and vitamins you need, no
-              matter what diet you follow!
+              再也不用浪費時間考慮要吃什麼了！ VITAFOOD
+              AI將為您製定一個100%個人化的每週餐單。
+              它確保您獲得所需的所有營養和維生素，無論您遵循何種飲食！
             </p>
           </div>
           <div class="step-img-box">
@@ -144,22 +157,19 @@
           </div>
           <div class="step-text-box">
             <p class="step-number">02</p>
-            <h3 class="heading-tertiary">Approve your weekly meal plan</h3>
+            <h3 class="heading-tertiary">批准您的每週餐單</h3>
             <p class="step-description">
-              Once per week, approve the meal plan generated for you by Omnifood
-              AI. You can change ingredients, swap entire meals, or even add
-              your own recipes.
+              每週一次，批准由VITAFOOD
+              AI為您生成的餐單。您可以更改食材、替換整餐，甚至添加自己的食譜
             </p>
           </div>
 
           <!-- STEP 03 -->
           <div class="step-text-box">
             <p class="step-number">03</p>
-            <h3 class="heading-tertiary">Receive meals at convenient time</h3>
+            <h3 class="heading-tertiary">在方便的時間收到餐點</h3>
             <p class="step-description">
-              Best chefs in town will cook your selected meal every day, and we
-              will deliver it to your door whenever works best for you. You can
-              change delivery schedule and address daily!
+              最佳的大廚每天為您烹飪所選的餐點，而我們將在最適合您的時間將其送到您的門口。您每天都可以更改送餐時間和地址！
             </p>
           </div>
           <div class="step-img-box">
@@ -175,10 +185,8 @@
 
       <section class="section-meals">
         <div class="container center-text">
-          <span class="subheading">Meals</span>
-          <h2 class="heading-secondary">
-            VITAFOOD AI chooses from 5,000+ recipes
-          </h2>
+          <span class="subheading">餐點</span>
+          <h2 class="heading-secondary">VITAFOOD AI從5000+食譜中選擇</h2>
         </div>
 
         <div class="container grid grid--3-cols margin-bottom-md">
@@ -192,22 +200,22 @@
               <div class="meal-tags">
                 <span class="tag tag--vegetarian">Vegetarian</span>
               </div>
-              <p class="meal-title">Japanese Gyozas</p>
+              <p class="meal-title">日式煎餃</p>
               <ul class="meal-attributes">
                 <li class="meal-attribute">
                   <ion-icon class="meal-icon" name="flame-outline"></ion-icon
-                  ><sapn><strong>650</strong> calories</sapn>
+                  ><sapn><strong>650</strong> 卡路里</sapn>
                 </li>
                 <li class="meal-attribute">
                   <ion-icon
                     class="meal-icon"
                     name="restaurant-outline"
                   ></ion-icon
-                  ><sapn> NutriScore &reg; <strong>74</strong> </sapn>
+                  ><sapn> 營養評分 &reg; <strong>74</strong> </sapn>
                 </li>
                 <li class="meal-attribute">
                   <ion-icon class="meal-icon" name="star-outline"></ion-icon
-                  ><sapn><strong>4.9</strong> rating(537)</sapn>
+                  ><sapn><strong>4.9</strong> 評級(537)</sapn>
                 </li>
               </ul>
             </div>
@@ -223,28 +231,28 @@
                 <span class="tag tag--vegan">Vegan</span>
                 <span class="tag tag--paleo">Paleo</span>
               </div>
-              <p class="meal-title">Avocado Salad</p>
+              <p class="meal-title">酪梨沙拉</p>
               <ul class="meal-attributes">
                 <li class="meal-attribute">
                   <ion-icon class="meal-icon" name="flame-outline"></ion-icon
-                  ><sapn><strong>400</strong> calories</sapn>
+                  ><sapn><strong>400</strong> 卡路里</sapn>
                 </li>
                 <li class="meal-attribute">
                   <ion-icon
                     class="meal-icon"
                     name="restaurant-outline"
                   ></ion-icon
-                  ><sapn> NutriScore &reg; <strong>92</strong> </sapn>
+                  ><sapn> 營養評分 &reg; <strong>92</strong> </sapn>
                 </li>
                 <li class="meal-attribute">
                   <ion-icon class="meal-icon" name="star-outline"></ion-icon
-                  ><sapn><strong>4.8</strong> rating(441)</sapn>
+                  ><sapn><strong>4.8</strong> 評級(441)</sapn>
                 </li>
               </ul>
             </div>
           </div>
           <div class="diets">
-            <h3 class="heading-tertiary">Works with any diet:</h3>
+            <h3 class="heading-tertiary">適用於任何飲食方式:</h3>
             <ul class="list">
               <li class="list-item">
                 <ion-icon class="list-icon" name="checkmark-outline"></ion-icon
@@ -286,14 +294,14 @@
           </div>
         </div>
         <div class="container all-recipes">
-          <a href="#" class="link">See all recipes &rarr;</a>
+          <a href="#" class="link">查看所有食譜 &rarr;</a>
         </div>
       </section>
 
       <section class="section-testimonials">
         <div class="testimonials-container">
-          <span class="subheading">Testimonials</span>
-          <h2 class="heading-secondary">Once you try it, you can't go back</h2>
+          <span class="subheading">用戶評價</span>
+          <h2 class="heading-secondary">一旦嘗試，就回不去了!</h2>
 
           <div class="testimonials">
             <figure class="testimonial">
@@ -303,10 +311,9 @@
                 src="img/customers/dave.jpg"
               />
               <blockquote class="testimonial-text">
-                Inexpensive, healthy and great-tasting meals, without even
-                having to order manually! It feels truly magical.
+                價格便宜、健康且味道絕佳的餐點，甚至無需手動下單！真的感覺像魔法一樣
               </blockquote>
-              <p class="testimonial-name">&mdash; Dave Bryson</p>
+              <p class="testimonial-name">&mdash; 戴夫&nbsp;布賴森</p>
             </figure>
 
             <figure class="testimonial">
@@ -316,10 +323,9 @@
                 src="img/customers/ben.jpg"
               />
               <blockquote class="testimonial-text">
-                The AI algorithm is crazy good, it chooses the right meals for
-                me every time. It's amazing not to worry about food anymore!
+                AI算法真的太強大了，每次都能為我選擇合適的餐點。不再為食物擔心真的太棒了！
               </blockquote>
-              <p class="testimonial-name">&mdash; Ben Hadley</p>
+              <p class="testimonial-name">&mdash; 本&nbsp;哈德利</p>
             </figure>
 
             <figure class="testimonial">
@@ -329,10 +335,9 @@
                 src="img/customers/steve.jpg"
               />
               <blockquote class="testimonial-text">
-                Vitafood is a life saver! I just started a company, so there's
-                no time for cooking. I couldn't live without my daily meals now!
+                Vitafood真是救星！我剛創業，所以根本沒時間做飯。現在我不能沒有我的每日餐點了！
               </blockquote>
-              <p class="testimonial-name">&mdash; Steve Miller</p>
+              <p class="testimonial-name">&mdash; 史蒂夫&nbsp;米勒</p>
             </figure>
 
             <figure class="testimonial">
@@ -342,10 +347,9 @@
                 src="img/customers/hannah.jpg"
               />
               <blockquote class="testimonial-text">
-                I got Vitafood for the whole family, and it frees up so much
-                time! Plus, everything is organic and vegan and without plastic.
+                我為全家人都買了Vitafood，這省下了很多時間！而且，所有食物都是有機的、純素的，且不使用塑料包裝。
               </blockquote>
-              <p class="testimonial-name">&mdash; Hannah Smith</p>
+              <p class="testimonial-name">&mdash; 漢娜&nbsp;史密斯</p>
             </figure>
           </div>
         </div>
@@ -427,63 +431,61 @@
 
       <section class="section-pricing">
         <div class="container">
-          <span class="subheading">Pricing</span>
-          <h2 class="heading-secondary">
-            Eating well without breaking the bank
-          </h2>
+          <span class="subheading">價格方案</span>
+          <h2 class="heading-secondary">健康飲食不花大錢</h2>
         </div>
 
         <div class="container grid grid--2-cols margin-bottom-md">
           <div class="princing-plan princing-plan--starter">
             <header class="plan-header">
-              <p class="plan-name">Starter</p>
+              <p class="plan-name">前菜方案</p>
               <p class="plan-price"><span>$</span>399</p>
-              <p class="plan-text">per month. That's just $13 per meal!</p>
+              <p class="plan-text">每月相當於每餐只需$13!</p>
             </header>
             <ul class="list">
               <li class="list-item">
                 <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span>1 meal per day</span>
+                <span>每天1餐</span>
               </li>
               <li class="list-item">
                 <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span>Order from 11am to 9pm</span>
+                <span>早上11點到晚上9點下單</span>
               </li>
               <li class="list-item">
                 <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span>Delivery is free</span>
+                <span>免費送餐</span>
               </li>
               <li class="list-item">
                 <ion-icon class="list-icon" name="close-outline"></ion-icon>
               </li>
             </ul>
             <div class="plan-sing-up">
-              <a href="#" class="btn btn--full">Start eating well</a>
+              <a href="#" class="btn btn--full">開啟健康日常</a>
             </div>
           </div>
 
           <div class="princing-plan princing-plan--complete">
             <header class="plan-header">
-              <p class="plan-name">Complete</p>
+              <p class="plan-name">完整方案</p>
               <p class="plan-price"><span>$</span>649</p>
-              <p class="plan-text">per month. That's just $11 per meal!</p>
+              <p class="plan-text">每月相當於每餐只需$11!</p>
             </header>
             <ul class="list">
               <li class="list-item">
                 <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span><strong>2 meals</strong> per day</span>
+                <span>每天<strong>2</strong> 餐</span>
               </li>
               <li class="list-item">
                 <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span>Order <strong>24/7</strong></span>
+                <span>全天<strong>24</strong>小時下單</span>
               </li>
               <li class="list-item">
                 <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span>Delivery is free</span>
+                <span>免費送餐</span>
               </li>
               <li class="list-item">
                 <ion-icon class="list-icon" name="checkmark-outline"></ion-icon>
-                <span>Get access to latest recipes</span>
+                <span>獲得最新食譜</span>
               </li>
             </ul>
             <div class="plan-sing-up">
@@ -491,6 +493,174 @@
             </div>
           </div>
         </div>
+
+        <div class="container grid">
+          <aside class="plan-details">
+            價格已包含所有適用的稅項。用戶可以隨時取消。兩種方案都包括以下內容：
+          </aside>
+        </div>
+
+        <div class="container grid grid--4-cols">
+          <div class="feature">
+            <ion-icon class="feature-icon" name="infinite-outline"></ion-icon>
+            <p class="feature-title">再也不用做飯了！</p>
+            <p class="feature-text">
+              我們的訂閱覆蓋全年365天，甚至包括主要假期。
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon class="feature-icon" name="nutrition-outline"></ion-icon>
+            <p class="feature-title">本地且有機</p>
+            <p class="feature-text">
+              我們的廚師只使用本地、新鮮和有機產品來為您準備餐點。
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon class="feature-icon" name="leaf-outline"></ion-icon>
+            <p class="feature-title">注重環保</p>
+            <p class="feature-text">
+              我們所有的合作夥伴都只使用可重複使用的容器來包裝您的所有餐點。
+            </p>
+          </div>
+          <div class="feature">
+            <ion-icon class="feature-icon" name="pause-outline"></ion-icon>
+            <p class="feature-title">隨時暫停</p>
+            <p class="feature-text">
+              要去度假了嗎？只需暫停您的訂閱，我們會退還未使用的天數。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-cta">
+        <div class="container">
+          <div class="cta">
+            <div class="cta-text-box">
+              <h2 class="heading-secondary">品嚐首餐，免費體驗！</h2>
+              <p class="cta-text">
+                健康、美味且無憂的餐點正在等著您。立即開始健康飲食。您隨時可以取消或暫停。而且，第一餐由我們贈送！
+              </p>
+
+              <form class="cta-form" action="#">
+                <div>
+                  <label for="full-name">輸入全名</label>
+                  <input
+                    id="full-name"
+                    type="text"
+                    placeholder="王小明"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="email">電子信箱</label>
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="me@example.com"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="select-where">從何得知VITAFOOD?</label>
+                  <select id="select-where" required>
+                    <option value="">請選擇一個選項:</option>
+                    <option value="friends">朋友或家人</option>
+                    <option value="youtube">YouTube 影片</option>
+                    <option value="podcast">Podcast</option>
+                    <option value="ad">Facebook 廣告</option>
+                    <option value="others">其他</option>
+                  </select>
+                </div>
+
+                <button class="btn btn--form">立刻體驗</button>
+
+                <!-- <input type="checkbox" />
+                <input type="number" /> -->
+              </form>
+            </div>
+            <div
+              class="cta-img-box"
+              role="img"
+              aria-label="Woman enjoying food"
+            ></div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <img class="logo" alt="VITAFOOD logo" src="img/vitafood-logo.png" />
+          </a>
+
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-facebook"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a class="footer-link" href="#"
+                ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="copyright">
+            Copyright &copy; 2027 by VITAFOOD, Inc. All rights reserved.
+          </p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">聯絡我們</p>
+          <address class="contacts">
+            <p class="address">623 Adfgrh 街，9樓，Taipei，CA 94107</p>
+            <p>
+              <a class="footer-link" href="tel:415-201-6370">415-201-6370</a
+              ><br />
+              <a class="footer-link" href="mailto:hello@omnifood.com"
+                >hello@vitafood.com</a
+              >
+            </p>
+          </address>
+        </div>
+        <nav class="nav-col">
+          <p class="footer-heading">帳號</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">創建帳號</a></li>
+            <li><a class="footer-link" href="#">登入</a></li>
+            <li><a class="footer-link" href="#">iOS app</a></li>
+            <li><a class="footer-link" href="#">Android app</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">公司</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">關於 VITAFOOD</a></li>
+            <li><a class="footer-link" href="#">商業合作</a></li>
+            <li><a class="footer-link" href="#">烹飪夥伴</a></li>
+            <li><a class="footer-link" href="#">職業機會</a></li>
+          </ul>
+        </nav>
+
+        <nav class="nav-col">
+          <p class="footer-heading">資源</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">食譜目錄 </a></li>
+            <li><a class="footer-link" href="#">幫助中心</a></li>
+            <li><a class="footer-link" href="#">隱私權 & 條款</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
   </body>
 </html>
